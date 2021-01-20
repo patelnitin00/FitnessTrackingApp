@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">TrackIt App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Circular Progress Bar -->
+    <string name="indeterminate_mode">Indeterminate mode</string>
+    <string name="round_border">Round border</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="gender">Gender</string>
+    <string name="birthDate">Birthday</string>
+    <string name="weight">Weight in kg</string>
+    <string name="height">Height in cm</string>
+    <string name="activityType">ActivityType</string>
+    <string name="date">Date</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="distance">Distance in Km</string>
+    <string name="sets">Sets</string>
+    <string name="addActivity">Add Activity</string>
+    <string name="bmi">BMI Calculator</string>
+    <string name="journal">Journal</string>
+    <string name="home">Home</string>
+    <string name="projectDemo">Project Demo</string>
+    <string name="stepsDemo">Steps Counter Demo</string>
+    <string name="aboutUs">About Us</string>
+    <string name="title">Track It App / Created By: </string>
+    <string name="supporting_text">Vraj Bhagat - 991488064 \nNitin Patel - 991489983 \nJainil Parikh - 991486956</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="deleteMessage">Delete this activity?</string>
+    <string name="deleteAll">Delete All</string>
+</resources>

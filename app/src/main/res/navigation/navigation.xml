@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="project.st991488064.vnj.fragments.TitleFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_detailActivityFragment"
+            app:destination="@id/detailActivityFragment" />
+        <argument
+            android:name="swipeActivityEntity"
+            app:argType="project.st991488064.vnj.database.models.ActivitiesEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/bmiFragment"
+        android:name="project.st991488064.vnj.fragments.BMIFragment"
+        android:label="BMI Calculator"
+        tools:layout="@layout/fragment_bmi" />
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="project.st991488064.vnj.fragments.AddActivityFragment"
+        android:label="Add Activity"
+        tools:layout="@layout/fragment_add_activity">
+        <action
+            android:id="@+id/action_addActivityFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailActivityFragment"
+        android:name="project.st991488064.vnj.fragments.DetailActivityFragment"
+        android:label="Activity Details"
+        tools:layout="@layout/fragment_detail_activity">
+        <argument
+            android:name="currentActivityEntity"
+            app:argType="project.st991488064.vnj.database.models.ActivitiesEntity" />
+        <action
+            android:id="@+id/action_detailActivityFragment_to_editActivityFragment"
+            app:destination="@id/editActivityFragment" />
+        <action
+            android:id="@+id/action_detailActivityFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editActivityFragment"
+        android:name="project.st991488064.vnj.fragments.EditActivityFragment"
+        android:label="Edit Activity"
+        tools:layout="@layout/fragment_edit_activity">
+        <argument
+            android:name="activityEntityForEdit"
+            app:argType="project.st991488064.vnj.database.models.ActivitiesEntity" />
+        <action
+            android:id="@+id/action_editActivityFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="project.st991488064.vnj.fragments.JournalFragment"
+        android:label="Journal"
+        tools:layout="@layout/fragment_journal">
+        <action
+            android:id="@+id/action_journalFragment_to_detailActivityFragment"
+            app:destination="@id/detailActivityFragment" />
+        <action
+            android:id="@+id/action_journalFragment_self"
+            app:destination="@id/journalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="project.st991488064.vnj.fragments.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us">
+        <action
+            android:id="@+id/action_aboutUsFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalProjectDemoFragment"
+        android:name="project.st991488064.vnj.fragments.FinalProjectDemoFragment"
+        android:label="Final Project Demo"
+        tools:layout="@layout/fragment_final_project_demo" />
+    <fragment
+        android:id="@+id/stepsCounterDemoFragment"
+        android:name="project.st991488064.vnj.fragments.StepsCounterDemoFragment"
+        android:label="Steps Counter Demo"
+        tools:layout="@layout/fragment_steps_counter_demo" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="project.st991488064.vnj.fragments.SplashScreenFragment"
+        android:label="Activity Tracking App"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
